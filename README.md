@@ -1,7 +1,4 @@
-# hft-year-bill
 
-## Project setup
-```
 npm install
 ```
 ### 地址教程
