@@ -14,7 +14,10 @@ $('.test').click(function(){
  console.log(data);
  }
 });
-
-console.log($)
-	
+});
+$(document).ajaxStart(function(m){
+	console.log(m);
+}).ajaxStop(function(err){
+	console.log(err);
 })
+$( document ).ajaxSuccess(function( event, request, settings ) {    console.log('请求状态',request.status);});$( document ).ajaxError(function( event, request, settings ) {    console.log('失败',request.status);   if (request.status == 401) {       alert("没有权限,请登录。");   }});
