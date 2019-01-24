@@ -2,6 +2,20 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');  //引入插件，不�
 const path = require('path');
 const webpack = require('webpack')
 module.exports = {
+	module:
+	{
+    rules: [
+      {  test: require.resolve('jquery'),
+   use: [{
+      loader: 'expose-loader',
+      options: 'jQuery'
+   },{
+      loader: 'expose-loader',
+      options: '$'
+   }]
+      }
+    ]
+  },
     entry: {
         page1 : __dirname + '/src/page1/index.js',// page1的入口文件，webpack是以js为入口文件的
         page2 : __dirname + '/src/page2/index.js',

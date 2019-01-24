@@ -1,5 +1,6 @@
 
-const $ = require("jQuery");
+// const $ = require("jQuery");
+require('jquery');
 $('.test').click(function(){
 	var param={mobile:'13528422603'};
 	$.ajax({
